@@ -42,7 +42,7 @@ def create_wordpress_site(site_name):
 def enable_disable_site(enable, site_name):
     action = "starting" if enable else "stopping"
     print(f"{action.capitalize()} the WordPress site...")
-    if action == "enable":
+    if enable:
         startStopSite.start_wordpress(site_name)
     else:
         startStopSite.stop_wordpress(site_name)
@@ -74,18 +74,18 @@ def main():
             hosts_file.write(f"127.0.0.1\t{site_name}\n")
 
         print("Site setup completed successfully!")
-        print(f"Please open {site_name} in your browser to access the site.")
+        
 
     elif command == "enable":
         if len(sys.argv) < 3:
-            print("Usage: rtcampMain.py delete <site_name>")
+            print("Usage: rtcampMain.py enable <site_name>")
             sys.exit(1)
         site_name = sys.argv[2]
         enable_disable_site(True, site_name)
 
     elif command == "disable":
         if len(sys.argv) < 3:
-            print("Usage: rtcampMain.py delete <site_name>")
+            print("Usage: rtcampMain.py disable <site_name>")
             sys.exit(1)
         site_name = sys.argv[2]
         enable_disable_site(False, site_name)

@@ -77,5 +77,5 @@ def createSite(site_name):
     with open(f"{site_name}/nginx_config/default.conf", "w") as nginx_config_file:
         nginx_config_file.write(nginx_config_content)
 
-    print("WordPress site created successfully!")
+    print("Files created successfully!")
 
