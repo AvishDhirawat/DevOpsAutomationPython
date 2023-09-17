@@ -1,4 +1,4 @@
-# rtCampAssignment
+# rtCampAssignment - Devops Automation
 Devops Taks Details
 Create a command-line script, preferably in Bash, PHP, Node, or Python to perform the following tasks:
 
